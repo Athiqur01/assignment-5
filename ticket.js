@@ -16,8 +16,22 @@ function chooseTicket(button){
    const id=document.getElementById(getId);
    const innerTexT=id.innerText;
    id.classList.add('bg-[#1DD100]');
-   
+   //ticket selection moore than 4 give a alart message
+   const seatHidden=document.getElementById('seat-hidden')
+    if(ticketArray.length>3){
+     seatHidden.classList.remove('hidden');
+    }
+  //set time out
+  setTimeout(function () {
+    // Hide the message
+    seatHidden.classList.add("hidden");
+}, 8000);
+
+
+
+
    if(ticketArray.length>3){
+    //console.log(error);
     id.classList.remove('bg-[#1DD100]');
    } 
    //ticketArray=ticketArray.push(innerTexT);
