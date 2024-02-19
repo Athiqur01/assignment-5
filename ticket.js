@@ -2,7 +2,7 @@
 function scrollToTicket(){
     const scroll=document.getElementById('paribahanTicket')
     scroll.scrollIntoView({behavior:"smooth"});
-    console.log(scroll);
+    
 }
 
 //Select Ticket
@@ -94,7 +94,7 @@ function chooseTicket(button){
    grandTotal.innerText=totalPrice.innerText;
    const discounT=document.getElementById('discount');
    const discountedAmount=document.getElementById('discounted-amount');
-   console.log(discounT);
+   
    //coupon button enable and coupon apply------
    if(ticketArray.length===4 ){
    
@@ -116,7 +116,7 @@ function chooseTicket(button){
 
         }
         else if(textInput.value==='Couple 20'){
-            console.log(textInput.value);
+            
             grandTotal.innerText=totalPrice.innerText-totalPrice.innerText*.20;
             buttonCuopon.classList.add('hidden');
             textInput.classList.add('hidden');
@@ -128,7 +128,7 @@ function chooseTicket(button){
             
         
             couponError.classList.remove('hidden');
-            console.log('rrrr');
+            
             grandTotal.innerText=totalPrice.innerText;
         
         }
@@ -141,13 +141,13 @@ function chooseTicket(button){
      const phoneNumber3=document.getElementById('phone-number')
      
      
-     console.log(phoneNumber3.addEventListener('keyup',function(){
+     phoneNumber3.addEventListener('keyup',function(){
         
        if(dynamicTicketint>0){
         buttonConfirm.classList.remove('cursor-not-allowed','bg-[#1DD10099]');
         buttonConfirm.classList.add('bg-[#1DD100]')
        }
-     }))
+     })
      //if(dynamicTicketint>0 && )
 
      buttonConfirm.addEventListener('click', function(){
@@ -158,15 +158,15 @@ function chooseTicket(button){
      
      //condition for popup page
      if(phoneNumberInt !==NaN && phoneNumberInt>0){
-     console.log(phoneNumberInt);
+     
      const hiddenBody=document.getElementById('hidden-body');
      const popupDisplay=document.getElementById('popup-dsplay')
      hiddenBody.classList.add('hidden');
      popupDisplay.classList.remove('hidden');
-     console.log(popupDisplay)
+     
      }
      else {
-        (console.log('Type Valid phone number'))
+        
      phoneNumber.classList.add('border-red-400', 'border-2');
      errorMessage.classList.remove('hidden');
      } 
