@@ -95,24 +95,24 @@ function chooseTicket(button){
    const discounT=document.getElementById('discount');
    const discountedAmount=document.getElementById('discounted-amount');
    console.log(discounT);
-
+   //coupon button enable and coupon apply------
    if(ticketArray.length===4 ){
-
-    
-    
-    buttonCuopon.classList.remove('cursor-not-allowed');
-    //console.log(buttonCuopon)
-
-    
+   
+    buttonCuopon.classList.remove('cursor-not-allowed','bg-[#1DD10099]');
+    buttonCuopon.classList.add('bg-[#1DD100]')
+    // coupon button enable end and coupon apply start
     buttonCuopon.addEventListener('click', function(){
+        //error coupon message-------------
         
-        
+        //Coupon code Apply----------------
+        const couponError=document.getElementById('coupon-error');
         if (textInput.value==='NEW15'){
             grandTotal.innerText=totalPrice.innerText-totalPrice.innerText*.15;
             buttonCuopon.classList.add('hidden');
             textInput.classList.add('hidden');
             discounT.classList.remove('hidden')
             discountedAmount.innerText=totalPrice.innerText*.15;
+            couponError.classList.add('hidden');
 
         }
         else if(textInput.value==='Couple 20'){
@@ -122,18 +122,40 @@ function chooseTicket(button){
             textInput.classList.add('hidden');
             discounT.classList.remove('hidden')
             discountedAmount.innerText=totalPrice.innerText*.20;
+            couponError.classList.add('hidden');
         }
-        else(grandTotal.innerText=totalPrice.innerText);
+        else{
+            
+        
+            couponError.classList.remove('hidden');
+            console.log('rrrr');
+            grandTotal.innerText=totalPrice.innerText;
+        
+        }
     })
     }
      else(grandTotal.innerText=totalPrice.innerText);
 
      const buttonConfirm=document.getElementById('button-confirm');
+     //next button activate
+     const phoneNumber3=document.getElementById('phone-number')
+     
+     
+     console.log(phoneNumber3.addEventListener('keyup',function(){
+        
+       if(dynamicTicketint>0){
+        buttonConfirm.classList.remove('cursor-not-allowed','bg-[#1DD10099]');
+        buttonConfirm.classList.add('bg-[#1DD100]')
+       }
+     }))
+     //if(dynamicTicketint>0 && )
+
      buttonConfirm.addEventListener('click', function(){
        
      const phoneNumber=document.getElementById('phone-number')
      const phoneNumberInt= parseFloat(phoneNumber.value) ;
      const errorMessage=document.getElementById('error-message');
+     
      //condition for popup page
      if(phoneNumberInt !==NaN && phoneNumberInt>0){
      console.log(phoneNumberInt);
@@ -151,8 +173,6 @@ function chooseTicket(button){
      
      })
 
-     
-    
     }
     
     

@@ -332,8 +332,12 @@
                          </div>
                          <!--Coupon-->
                          <div class="ml-8">
+                          <!--Error message for invalid coupon-->
+                         <p id="coupon-error" class="pb-4 text-red-400 hidden">Your coupon is invalid. please provide a valid coupon</p>
+                         <!--Error message for invalid coupon end-->
+                         
                           <input  type="text" placeholder="Have any Coupon?" class="input input-bordered w-64 max-w-xs border-r-0 rounded-r-none  "  id="text-input"/>
-                          <button  id="button-cuopon"  class="btn bg-[#1DD100] text-white px-10 cursor-not-allowed" >Apply</button>
+                          <button  id="button-cuopon"  class="btn bg-[#1DD10099] text-white px-10 cursor-not-allowed" >Apply</button>
                          </div>
                          <div></div>
                          <!--Discount Amount-->
@@ -353,12 +357,12 @@
                   <div class="px-1 lg:px-0">
                     <!--Passenger name-->
                       <div>
-                        <p class="font-name-inter font-semibold py-3">Passenger Name</p>
+                        <p class="font-name-inter font-semibold py-3">Passenger Name*</p>
                         <input type="text" placeholder="Enter your name" class="input input-bordered w-[100%] lg:w-[95%] " />
                       </div>
                       <!--Passenger phone-->
                       <div>
-                        <p class="font-name-inter font-semibold py-3">Phone Number <span id="error-message" class="text-red-400 text-sm hidden"> **Inset a valid phone number</span></p>
+                        <p class="font-name-inter font-semibold py-3">Phone Number* <span id="error-message" class="text-red-400 text-sm hidden"> **Inset a valid phone number</span></p>
                         <input id="phone-number" type="number" placeholder="Enter your phone number" class="input input-bordered w-[100%] lg:w-[95%] " />
                       </div>
                       <!--Passenger email-->
@@ -371,7 +375,7 @@
                   <!-- next Button-->
                   <div class="pt-6 px-1 lg:px-0">
                     
-                    <button id="button-confirm" class="btn bg-[#1DD100] text-white px-10 w-[100%] lg:w-[95%] border-none ">Apply</button>
+                    <button id="button-confirm" class="btn bg-[#1DD10099] name-font text-xl font-extrabold text-white px-10 w-[100%] lg:w-[95%] border-none cursor-not-allowed ">Next</button>
                    </div>
                    <!--terms and condition-->
                    <div class=" flex justify-between px-1 lg:px-0 lg:mr-8 mt-4 pb-4">
