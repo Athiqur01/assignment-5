@@ -163,17 +163,18 @@ function chooseTicket(button){
      
      if(phoneNumberInt !==NaN && phoneNumberInt>0){
         console.log(phoneNumberInt);
+        const hiddenBody=document.getElementById('hidden-body');
+     const popupDisplay=document.getElementById('popup-dsplay')
+     hiddenBody.classList.add('hidden');
+     popupDisplay.classList.remove('hidden');
+     console.log(popupDisplay)
      }
      else {
         (console.log('Type Valid phone number'))
      phoneNumber.classList.add('border-red-400', 'border-2');
      errorMessage.classList.remove('hidden');
      } 
-     const hiddenBody=document.getElementById('hidden-body');
-     const popupDisplay=document.getElementById('popup-dsplay')
-     hiddenBody.classList.add('hidden');
-     popupDisplay.classList.remove('hidden');
-     console.log(popupDisplay)
+     
      })
 
      
