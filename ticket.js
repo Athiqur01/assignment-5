@@ -19,29 +19,18 @@ function chooseTicket(button){
    
    if(ticketArray.length>3){
     id.classList.remove('bg-[#1DD100]');
-   }
-    
-  
-    
-   
-    
-   
-   
+   } 
    //ticketArray=ticketArray.push(innerTexT);
    if(ticketArray.includes(innerTexT) ===false ){
     
    ticketArray.push(innerTexT);
    
-   
    const selectedTicketNo=ticketArray.length;
-   
-
    const ticketNo=document.getElementById('ticket-no');
    //selected ticket
    if (selectedTicketNo<5){
     ticketNo.innerText=selectedTicketNo;
    }
-   
 
    const availableSeat=document.getElementById('available-seat');
    let availableSeatString= availableSeat.innerText ;
@@ -50,8 +39,6 @@ function chooseTicket(button){
    if (selectedTicketNo<5){
     availableSeat.innerText=availableSeatInt-1;
    }
-   
-   
 
    }
    //set seat on the ticket
@@ -66,12 +53,7 @@ function chooseTicket(button){
    const dynamicTicket= ticketNoDynamic.innerText;
    const dynamicTicketint=parseInt(dynamicTicket)
     
-   
-   
-    
-   
-   
-   
+
    if(dynamicTicketint===1){
     const seat1Para=document.getElementById('seat1-para');
     seat1Para.innerText=ticketArray[0];
@@ -142,16 +124,8 @@ function chooseTicket(button){
             discountedAmount.innerText=totalPrice.innerText*.20;
         }
         else(grandTotal.innerText=totalPrice.innerText);
-
-       
     })
-    
-    
-    
     }
-
-    
-
      else(grandTotal.innerText=totalPrice.innerText);
 
      const buttonConfirm=document.getElementById('button-confirm');
@@ -160,10 +134,10 @@ function chooseTicket(button){
      const phoneNumber=document.getElementById('phone-number')
      const phoneNumberInt= parseFloat(phoneNumber.value) ;
      const errorMessage=document.getElementById('error-message');
-     
+     //condition for popup page
      if(phoneNumberInt !==NaN && phoneNumberInt>0){
-        console.log(phoneNumberInt);
-        const hiddenBody=document.getElementById('hidden-body');
+     console.log(phoneNumberInt);
+     const hiddenBody=document.getElementById('hidden-body');
      const popupDisplay=document.getElementById('popup-dsplay')
      hiddenBody.classList.add('hidden');
      popupDisplay.classList.remove('hidden');
