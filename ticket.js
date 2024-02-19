@@ -111,7 +111,7 @@ function chooseTicket(button){
    
    //coupon button enable and coupon apply------
    if(ticketArray.length===4 ){
-   
+    textInput.removeAttribute('disabled');
     buttonCuopon.classList.remove('cursor-not-allowed','bg-[#1DD10099]');
     buttonCuopon.classList.add('bg-[#1DD100]')
     // coupon button enable end and coupon apply start
